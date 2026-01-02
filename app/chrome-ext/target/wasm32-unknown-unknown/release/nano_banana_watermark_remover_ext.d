@@ -1,1 +1,0 @@
-D:\work\1.WorkSpace\Rust\nano-banana-watermark-remover\app\chrome-ext\target\wasm32-unknown-unknown\release\nano_banana_watermark_remover_ext.wasm: D:\work\1.WorkSpace\Rust\nano-banana-watermark-remover\app\chrome-ext\src\lib.rs
