@@ -1,15 +1,24 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import wasm from "vite-plugin-wasm";
+import topLevelAwait from "vite-plugin-top-level-await";
 import { resolve } from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
-    plugins: [vue()],
+    plugins: [
+        vue(),
+        wasm(),
+        topLevelAwait()
+    ],
+    root: "ui",
+    publicDir: "../public",
     build: {
-        outDir: "dist",
+        outDir: "../dist",
+        emptyOutDir: true,
         rollupOptions: {
             input: {
-                popup: resolve(__dirname, "index.html"),
+                popup: resolve(__dirname, "ui/index.html"),
             },
             output: {
                 entryFileNames: "[name].js",
